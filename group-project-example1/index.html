@@ -10,45 +10,50 @@
 </head>
 
 <body>
-  
-  <div class="row container">
-
-    <div class="card col s6">
-
-      <div class="card-content">
-        <div class="input-field col s12">
-          <select id="selector">
-            <option value="1">Entertainment</option>
-            <option value="2">Food</option>
-            <option value="3">Clothing</option>
-            <option value="4">Bills</option>
-          </select>
-          <label>Category</label>
-        </div>
-        <div class="input-field col s6">
-          <input placeholder="$" id="amount" type="number" class="validate">
-          <label for="amount">Amount ($)</label>
-        </div>
-        &nbsp
-        <a class="waves-effect waves-light btn col s6" onclick="buttonPressed()">Submit</a>
-      </div>
-    </div>
-
+  <main>
+    <h1>Money Mate</h1>
+<section class="chart_and_balance">
     <div class="card col s5  offset-s1">
 
-      <div class="card-content">
-        <h6 id="availBal"></h6>
+        <div class="card-content">
+          <h6 id="availBal"></h6>
+        </div>
       </div>
-    </div>
+   
 
   </div>
-  <div class="container">
+  <div class="chart">
 
     <div id="piechart" style="width: 100%; height: 500px;"></div>
 
   </div>
 
-  <div class="container row">
+  </section>
+
+  <section class="input_and_breakdown">
+      <div class="card col s6">
+
+          <div class="input">
+            <div class="category">
+              <select id="selector">
+                <option value="1">Entertainment</option>
+                <option value="2">Food</option>
+                <option value="3">Clothing</option>
+                <option value="4">Bills</option>
+              </select>
+              <label>Category</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="$" id="amount" type="number" class="validate">
+              <label for="amount">Amount ($)</label>
+            </div>
+            &nbsp
+            <a class="waves-effect waves-light btn col s6" onclick="buttonPressed()">Submit</a>
+          </div>
+        </div>
+    
+
+  <div class="breakDown">
 
 
     <table>
@@ -80,10 +85,7 @@
     </table>
 
   </div>
-
-
-
-
+</section>
 
 
 
@@ -92,7 +94,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="javascript.js"></script>
-
+</main>
 </body>
 
 </html>
