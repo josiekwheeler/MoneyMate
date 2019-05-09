@@ -1,0 +1,58 @@
+
+body {
+  background-color: aquamarine;
+
+}
+
+.container-row {
+  
+  justify-content: center;
+  display: flex;
+}
+
+table {
+  
+}
+
+
+@media only screen and (min-width: 768px) {
+   body {
+     background-color: pink;
+
+
+   }
+
+
+
+
+}
+
+
+
+/* 
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+
+
+
+}
+
+#piechart > div
+
+
+
+#piechart {
+  display:flex;
+} */
+
+

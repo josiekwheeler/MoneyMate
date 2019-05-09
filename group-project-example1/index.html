@@ -3,98 +3,94 @@
 
 <head>
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <title>Budget Calculator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <title>Budget Calculator</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <main>
-    <h1>Money Mate</h1>
-<section class="chart_and_balance">
-    <div class="card col s5  offset-s1">
 
-        <div class="card-content">
-          <h6 id="availBal"></h6>
-        </div>
-      </div>
-   
+ <div class="row container">
 
-  </div>
-  <div class="chart">
+   <div class="card col s6">
 
-    <div id="piechart" style="width: 100%; height: 500px;"></div>
+     <div class="card-content">
+       <div class="input-field col s12">
+         <select id="selector">
+           <option value="1">Entertainment</option>
+           <option value="2">Food</option>
+           <option value="3">Clothing</option>
+           <option value="4">Bills</option>
+         </select>
+         <label>Category</label>
+       </div>
+       <div class="input-field col s6">
+         <input placeholder="$" id="amount" type="number" class="validate">
+         <label for="amount">Amount ($)</label>
+       </div>
+       &nbsp
+       <a class="waves-effect waves-light btn col s6" onclick="buttonPressed()">Submit</a>
+     </div>
+   </div>
 
-  </div>
+   <div class="card col s5  offset-s1">
 
-  </section>
+     <div class="card-content">
+       <h6 id="availBal"></h6>
+     </div>
+   </div>
 
-  <section class="input_and_breakdown">
-      <div class="card col s6">
+ </div>
+ <div class="container">
 
-          <div class="input">
-            <div class="category">
-              <select id="selector">
-                <option value="1">Entertainment</option>
-                <option value="2">Food</option>
-                <option value="3">Clothing</option>
-                <option value="4">Bills</option>
-              </select>
-              <label>Category</label>
-            </div>
-            <div class="input-field col s6">
-              <input placeholder="$" id="amount" type="number" class="validate">
-              <label for="amount">Amount ($)</label>
-            </div>
-            &nbsp
-            <a class="waves-effect waves-light btn col s6" onclick="buttonPressed()">Submit</a>
-          </div>
-        </div>
-    
+   <div id="piechart" style="width: 100%; height: 400px;"></div>
 
-  <div class="breakDown">
+ </div>
+
+ <div class="container row">
 
 
-    <table>
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Spent ($)</th>
-        </tr>
-      </thead>
+   <table>
+     <thead>
+       <tr>
+         <th>Category</th>
+         <th>Spent ($)</th>
+       </tr>
+     </thead>
 
-      <tbody>
-        <tr>
-          <td>Entertainment</td>
-          <td id="entertainmentSpent">$0</td>
-        </tr>
-        <tr>
-          <td>Food</td>
-          <td id="foodSpent">$0</td>
-        </tr>
-        <tr>
-          <td>Clothing</td>
-          <td id="clothingSpent">$0</td>
-        </tr>
-        <tr>
-          <td>Bills</td>
-          <td id="billsSpent">$0</td>
-        </tr>
-      </tbody>
-    </table>
+     <tbody>
+       <tr>
+         <td>Entertainment</td>
+         <td id="entertainmentSpent">$0</td>
+       </tr>
+       <tr>
+         <td>Food</td>
+         <td id="foodSpent">$0</td>
+       </tr>
+       <tr>
+         <td>Clothing</td>
+         <td id="clothingSpent">$0</td>
+       </tr>
+       <tr>
+         <td>Bills</td>
+         <td id="billsSpent">$0</td>
+       </tr>
+     </tbody>
+   </table>
 
-  </div>
-</section>
+ </div>
 
 
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript" src="javascript.js"></script>
-</main>
+
+
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script type="text/javascript" src="javascript.js"></script>
+
 </body>
 
 </html>
